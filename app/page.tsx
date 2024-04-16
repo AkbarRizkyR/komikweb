@@ -1,51 +1,120 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { Card, CardBody } from "@nextui-org/card";
+import { Chip } from "@nextui-org/chip"
+import Image from "next/image";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
-			</div>
-
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
+		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 h-full">
+			<Card>
+				<CardBody>
+					<div className="flex flex-col w-full">
+						<div className="flex justify-center">
+							<Image
+								src="/logo.png"
+								alt="Dislost LinkTree Shorter"
+								width={200}
+								height={200}
+								className="justify-center rounded-full border-2"
+							/>
+						</div>
+						<div className="flex justify-center pt-2">
+							<h2 className="text-3xl font-bold font-mono">Dislost LinkTree</h2>
+						</div>
+						<div className="flex justify-center m-4 gap-4">
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								NextJS 13
+							</Chip>
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								VueJs 3
+							</Chip>
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								NuxtJs 3
+							</Chip>
+						</div>
+						<div className="flex justify-center m-2 gap-4">
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								ReactJs
+							</Chip>
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								PHP
+							</Chip>
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								HTML
+							</Chip>
+							<Chip
+								variant="shadow"
+								color="success"
+								size="sm"
+							>
+								CSS
+							</Chip>
+						</div>
+						<div className="flex justify-center max-w-sm">
+							<p className="text-md text-center font-semibold">
+								Hi!, I&apos;m a web developer, I create websites and web applications using the latest technologies,
+							</p>
+						</div>
+						<div className="flex justify-center max-w-sm pt-2">
+							<p className="text-md text-center font-semibold">
+								I&apos;m a frontend developer, I use the following technologies: NextJS, VueJS, NuxtJS, ReactJS, PHP, HTML, CSS, and more.
+							</p>
+						</div>
+						<div className="flex flex-col justify-center pt-4 gap-4">
+							<a href="www.youtube.com/dislost0" target="_blank" rel="noopener noreferrer">
+								<Card className="w-full" isHoverable>
+									<CardBody className="p-3">
+										<h3 className="self-center text-lg">
+											Youtube
+										</h3>
+									</CardBody>
+								</Card>
+							</a>
+							<a href="https://github.com/AkbarRizkyR" target="_blank" rel="noopener noreferrer">
+								<Card className="w-full" isHoverable>
+									<CardBody className="p-3">
+										<h3 className="self-center text-lg">
+											Github
+										</h3>
+									</CardBody>
+								</Card>
+							</a>
+							<a href="https://github.com/AkbarRizkyR" target="_blank" rel="noopener noreferrer">
+								<Card className="w-full" isHoverable>
+									<CardBody className="p-3">
+										<h3 className="self-center text-lg">
+											Portofolio
+										</h3>
+									</CardBody>
+								</Card>
+							</a>
+						</div>
+					</div>
+				</CardBody>
+			</Card>
 		</section>
 	);
 }
