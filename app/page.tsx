@@ -84,7 +84,7 @@ export default function Home() {
 							</p>
 						</div>
 						<div className="flex flex-col justify-center pt-4 gap-4">
-							<a href="www.youtube.com/dislost0" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.youtube.com/channel/UCMOukWZhRPoGIuC64mvso3A" target="_blank" rel="noopener noreferrer">
 								<Card className="w-full" isHoverable>
 									<CardBody className="p-3">
 										<h3 className="self-center text-lg">
@@ -102,7 +102,7 @@ export default function Home() {
 									</CardBody>
 								</Card>
 							</a>
-							<a href="https://github.com/AkbarRizkyR" target="_blank" rel="noopener noreferrer">
+							<a href="https://new-porto-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
 								<Card className="w-full" isHoverable>
 									<CardBody className="p-3">
 										<h3 className="self-center text-lg">
